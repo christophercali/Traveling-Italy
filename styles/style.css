@@ -1,0 +1,81 @@
+body {
+  font-family: 'PT Serif', sans-serif;
+
+}
+
+#page{
+  background-color:black;
+}
+#maincontainer{
+  overflow-x: scroll;
+  background-color: rgb(255, 255, 193);
+  padding:3%;
+  margin-left: 30px;
+}
+
+header{
+}
+
+h1{
+  color: rgb(0, 0, 0);
+  font-family: 'Bad Script';
+  font-size: 40px;
+}
+
+.cityTitle{
+  color: rgb(0, 0, 0);
+  font-family: 'Bad Script';
+  font-size: 30px;
+}
+
+h2{
+  color: rgb(255, 0, 0);
+}
+
+.informational {
+  height: 200px;
+  width: 200px;
+  border: 1px solid rgb(255, 255, 255,0.5);
+  background: rgba(62, 179, 49, 0.5);
+  width: 100%;
+  height: 100%;
+  
+  border: 1px solid rgb(255, 255, 255,0.5);
+  background: black;
+  color:white;
+  margin: auto;
+  border-radius:1mm;
+  padding: 10px;
+  box-shadow: #fff;
+  text-align: center;
+}
+
+/* for city, we need the following: the hover clicker, change in opacity when hovered*/
+/* then using JS, keeping lit, when selected. Showing what HTML needs to be shown below. */
+.city {
+font-family: 'Bad Script';
+height: 100px;
+  width: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  background: rgba(93, 74, 0, 0.99);
+  color: white;
+  margin: 5px;
+  border-radius:1mm;
+  padding: 6px;
+  text-align: center;
+  font-size:large;
+  vertical-align:center;
+  
+}
+
+.city:hover{
+  opacity: 60%;
+  cursor: pointer;
+}
+
+#cardcontainer{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
