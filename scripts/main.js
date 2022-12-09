@@ -96,7 +96,49 @@ $("#cinqueTitle").click(function(){
     $("#cinqueCard").show("slow");
   });
 
-
-
-
   });
+
+  
+//   Using the leaflet stuff for this now
+  var map = L.map('map', {
+    center: [41.9028, 12.4964], zoom: 6 //lat long is rome
+})
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+  maxZoom: 18
+}).addTo(map);
+
+
+// having major issues here. Not sure how to do this.
+//Adding points for all of the italian cities using the JSON file from simplemaps italy database. 
+
+// fetch('it.json')
+//     .then(response =>.json())
+//     .then(data => {
+//         var citiesItaly = JSON.parse(?);
+//     })
+
+// var citiesItaly = JSON.parse(
+    
+// );
+
+// console.log(citiesItaly);
+// for (var i=0; i < citiesItaly.length; i++){
+// //    let city be the city in the JSON
+//     var city = citiesItaly [i];
+// // Make marker for each
+//     var marker = L.marker([city.lat, city.lng]);
+//     marker.addTo(map)
+// // giving a label/pop up
+//     marker.bindPopup(city.city);
+
+// }
+
+// Create markers for some of the major cities in Italy and add them to the map
+var firenzeMarker = L.marker([43.7696, 11.2558]).addTo(map);
+var veneziaMarker = L.marker([45.4408, 12.3155]).addTo(map);
+
+// Add labels to the markers
+firenzeMarker.bindPopup("<b>Firenze</b>");
+veneziaMarker.bindPopup("<b>Venezia</b>");

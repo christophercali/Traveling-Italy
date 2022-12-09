@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-    <!-- Add the language stuff and unicode things! -->
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>Traveling Italy: A Time Capsule on the Web</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css" media="screen" />
     <style>
@@ -11,7 +11,14 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-        <script src="scripts/main.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        <script src="itcopy.js"></script>
 </head>
     
 <body>
@@ -287,19 +294,23 @@
                 </div>
                 <br>
             </div>
+            
+            <!-- Map of Italy will probably go here. Just to simplify this! -->
+            <div class="informational">
+                 You can locate the cities on the map below!  
+            </div>
 
+            <div id="map">
+            </div>
         
             </div>
 
-            <!-- Map of Sicily will probably go here. Just to simplify this! -->
-            <div class="informational">
-                You can locate the cities on the map below!  
-            </div>
-            
+
 
         </div>
    </div> 
-   
+   <script src="scripts/main.js"></script>
+
 </body>
 
 </html> 

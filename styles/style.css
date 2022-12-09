@@ -103,5 +103,6 @@ height: 60px;
 
 }
 
-.hidden{
+#map{
+  height: 600px;;
 }
